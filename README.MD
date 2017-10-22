@@ -31,3 +31,9 @@ Del lado del servidor ejecutar el script deploy.cmd, este script ejecuta los sig
 2. Detiene el aplication pool
 3. Descomprime el release de github en el directorio creado en la configuracion de IIS
 4. Reinicia el application pool
+
+_Ejemplo_
+
+* ./publish.sh 0.0.1-master
+Y en el server con IIS:
+* .\deploy.ps1 -repo charlygrappa/workflow-core-poc -tag 0.0.1-master
