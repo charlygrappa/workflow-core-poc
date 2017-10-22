@@ -22,9 +22,16 @@
 Del lado del cliente ejecutar el script publish.sh, este script ejecuta los siguientes pasos
 1. Corre el comando dotnet publish y genera el directorio de instalacion
 2. Comprime el directorio en un archivo .zip
+3. Crea el tag para el release en github
 
-Corre el script release.sh, este script ejecuta el siguiente paso
-1. Crea un release en github y sube el archivo del punto anterior
+En github ejecutar los siguientes pasos
+
+* Ir releases
+* Seleccionar el release recien creado
+* Edit tag
+* Subir el binario generado por el script anterior
+* Guardar
+
 
 Del lado del servidor ejecutar el script deploy.cmd, este script ejecuta los siguientes pasos
 1. Descarga el release de github
