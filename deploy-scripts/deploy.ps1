@@ -18,15 +18,14 @@ Write-Host Downloading $file from github
 Invoke-WebRequest $download -Out $file
 
 Expand-Archive $file -Force -DestinationPath $temp_dir
-Pause
 
 # Detener Application Pool de IIS
 
 # Mover a la carpeta destino
 
 Write-Host Copying new version
-Remove-Item $final_dir\$tag -Recurse -Force -ErrorAction SilentlyContinue
-Move-Item $temp_dir\$tag\ -Destination $final_dir -Force
+Remove-Item $final_dir -Recurse -Force -ErrorAction SilentlyContinue
+Move-Item $temp_dir\$tag -Destination $final_dir -Force
 
 # Limpiar archivos temporales
 Write-Host Cleaning up
