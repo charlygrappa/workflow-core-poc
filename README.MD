@@ -8,6 +8,7 @@
 
 * Visual Studio (Mac o Windows)
 * Net 4.6 o superior. (En el cliente y en el servidor)
+* SDK de ASP.NET Core (En el cliente en el sol)
 * Herramienta dotnet. (En el cliente y en el servidor)
 
 **Configuracion de IIS**
@@ -16,6 +17,10 @@
 * Crear una aplicación en IIS que apunte al directorio anterior.
 * Asegurarse que la aplicación incluye el módulo AspNetCoreModule
 * En la configuración del Application Pool, poner _No Managed Code_ ya que IIS es simplemente un proxy reverso
+* Instalar los módulos URL Rewrite y Application Request Routing de IIS
+* Agregar una regla nueva y usar la plantilla _Reverse Proxy_
+* Apuntar a localhost:5000
+* Reiniciar el sitio
 
 **Deployment**
 
